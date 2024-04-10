@@ -2,65 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewports" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-        h1 {
-            color: #333;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -76,42 +20,32 @@
 </nav>
 
 <section>
-    <div class="containers">
+    <div class="container">
         <h2>Welcome to our Library</h2>
         <p>This is a simple Library Management System website.</p>
         <h3>List of Books</h3>
         <table>
             <thead>
                 <tr>
+                    <th>Book Cover</th>
                     <th>Book ID</th>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Category</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Book 1</td>
-                    <td>Author 1</td>
-                    <td>Category 1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Book 2</td>
-                    <td>Author 2</td>
-                    <td>Category 2</td>
-                </tr>
-                <!---- Add more rows for additional books -->
+            <tbody id="bookList">
+                <!-- Books will be dynamically added here -->
             </tbody>
         </table>
-        <a href="#" class="button">Add New Book</a>
+        <button id="addBookBtn" class="button">Add New Book</button>
         <br><br>
         <h3>Search for a Book</h3>
-        <input type="text" placeholder="Enter book title or author...">
-        <input type="submit" value="Search" class="button">
+        <input type="text" id="searchInput" placeholder="Enter book title or author...">
+        <button id="searchBtn" class="button">Search</button>
     </div>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
